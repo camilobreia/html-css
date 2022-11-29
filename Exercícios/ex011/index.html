@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"> <!--sempre tem que ser acima do maior-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+        <!--por padrão o navegador carrega a foto do <img src ...>, mas o MAX-WIDTH diz que se por acaso o navegador tiver menos de 1000px por exemplo, vai carregar a imagem M, sempre colocamos um pouco mais de px do que na imagem para deixar uma folga para o navegador-->
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio src="midia/lookboth.mp3" controls autoplay loop></audio>
+    <!-- colocamos CONTROLS para aparecer os controles do áudio no navegador-->
+    <!-- AUTOPLAY para iniciar o áudio automaticamente-->
+    <!--LOOP para repetir o áudio - NÃO RECOMENDADO-->
+    <!-- esta TAG AUDIO SRC funciona para: MP3 WAV OGG-->
+    <!--Podemos utilizar audio conforme tag acima, ou então especificar ao navegador o tipo do áudio, conforme vemos abaixo:-->
+    <audio preload="metadata" controls> 
+        <source src="midia/themoon.mp3" type="audio/mpeg"> <!-- 1º tenta carregar o de cima e depois os de baixo-->
+        <source src="midia/themoon.ogg" type="audio/ogg">
+        <source src="midia/themoon.wav" type="audio/wav">
+    </audio>
+    <p>Infelizmente seu navegador não consegue reproduzir áudio. <br><a href="midia/themoon.mp3" download="themoon.mp3" type="audio/mpeg">Clique aqui para baixar o arquivo MP3</a></p>
+    <!--PRELOAD serve para => AUTO: só vai considerar que o site vai terminar de carregar depois de carregar o áudio / METADATA: só carrega algumas informações do áudio como nome, duração, data,... / NONE: não carrega nada-->
+</body>
+</html>

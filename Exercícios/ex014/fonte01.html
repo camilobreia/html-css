@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /*primeiro o navegador tenta Arial, caso não tenha essa fonte, vai na 2ª e assim por diante - SAFE COMBINATION*/
+            /* Medidas Absolutas: cm, mm, in (polegada), px (pixel), pt (ponto), pc (paica)
+            -> as vezes o navegador não consegue mostrar o tamanho absoluto devido ao tamanho da tela
+            -> não é recomendado usar PT e PC para impressão em telas
+
+            Medidas Relativas: em (relativa ao tamanho atual da fonte), ex (relativa a altura X de uma fonte), rem (relativo a fonte configurada no body), vw (relativa a largura da view port - tamanho visível do navegador), vh (relativa a altura da view port - tamanho visível do navegador)
+
+            -> 16px geralmente = 1em
+            */
+            font-size: 1em;
+            font-weight: bolder; /* para alterar o PESO da fonte*/
+            font-style: italic; /*para alterar o ESTILO da fonte*/
+            text-decoration: underline; /*para deixar sublinhado*/
+        }        
+        h1 {
+            /*SHORHAND FONT - (font-style => font-weight => font-size => font-family) necessariamente nesta ordem => exemplo*/
+            font: italic bolder 3em Arial, Helvetica;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Fontes</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa omnis, facilis consequatur iure, impedit accusamus ex magnam iste laudantium magni amet, a sint quae adipisci illum ducimus dolore eaque tempore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo iure cum ratione nesciunt illum optio eum, vel veritatis commodi temporibus. Modi et nulla amet suscipit iure fuga quo aliquid accusantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati vero sapiente molestiae eius, et sit quibusdam ullam soluta possimus accusantium consequatur minima dicta ad blanditiis commodi nam fuga neque voluptatum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eaque, iure quo architecto sunt inventore! Quam consequatur pariatur laborum aliquam non fugit quasi tenetur adipisci minima! Repudiandae, aut beatae! Voluptates?</p>
+    <h2>Subtítulo do Exercício</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe iste ullam perspiciatis iusto ipsa, earum in explicabo, perferendis magnam minima rerum aspernatur, ad esse aperiam aliquid. Aliquid mollitia harum ipsa?</p>
+</body>
+</html>
