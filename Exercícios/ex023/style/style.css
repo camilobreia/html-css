@@ -33,3 +33,10 @@ section#telefone {
     background: url('../images/frame-iphone.png') no-repeat;
 }
 
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px; /*para alinhar o ifram na tela do celular*/
+    width: 269px;
+    height: 471px;
+}
